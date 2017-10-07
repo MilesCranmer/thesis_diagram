@@ -1,14 +1,14 @@
 digraph mygraph {
 overlap=scalexy;
-A [label="Calculating the sensitivity of CHIME FRB\nto fast radio transients. As in, what\nis the distribution of probabilities for a\ndetection: P (DM, Δt,  S, ...) given typical RFI at site."];
+A [fontsize=32 label="Calculating the sensitivity of CHIME FRB\nto fast radio transients. As in, what\nis the distribution of probabilities for a\ndetection: P (DM, Δt,  S, ...) given typical RFI at site."];
 A -> B1 ;
-B1 [label="Analytical"];
+B1 [fontsize=25 label="Analytical"];
 A -> B2 ;
-B2 [label="Experimental (injection)"];
+B2 [fontsize=25 label="Experimental (injection)"];
 A -> B3 ;
-B3 [label=" Validations"];
+B3 [fontsize=25 label=" Validations"];
 A -> B4 ;
-B4 [label="Other/Combined"];
+B4 [fontsize=25 label="Combined"];
 B1 -> C1 ;
 C1 [label=" Basis is the radiometer equation: \nS/N = C (T_A/T_S) sqrt(τ Δν)"];
 C1 -> D1 ;
