@@ -1,5 +1,7 @@
 digraph mygraph {
-overlap=scalexy;
+layout="sfdp";
+overlap="prism";
+splines="true";
 A [fontsize=32 label="Calculating the sensitivity of CHIME FRB\nto fast radio transients. As in, what\nis the distribution of probabilities for a\ndetection: P (DM, Δt,  S, ...) given typical RFI at site."];
 A -> B1 ;
 B1 [fontsize=25 label="Analytical"];
