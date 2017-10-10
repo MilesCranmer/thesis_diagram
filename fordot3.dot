@@ -1,16 +1,20 @@
 digraph mygraph {
-layout="sfdp";
+//layout="sfdp";
 overlap="prism";
 splines="true";
 A [fontsize=32 label="Calculating the sensitivity of CHIME FRB\nto fast radio transients. As in, what\nis the distribution of probabilities for a\ndetection: P (DM, Δt,  S, ...) given typical RFI at site."];
+subgraph {
+rank = same;
+    B1 [fontsize=25 label="Analytical"];
+    B2 [fontsize=25 label="Experimental (injection)"];
+    B3 [fontsize=25 label=" Validations"];
+    B4 [fontsize=25 label="Combined"];
+    B5 [fontsize=25 label="Other"];
+}
 A -> B1 ;
-B1 [fontsize=25 label="Analytical"];
 A -> B2 ;
-B2 [fontsize=25 label="Experimental (injection)"];
 A -> B3 ;
-B3 [fontsize=25 label=" Validations"];
 A -> B4 ;
-B4 [fontsize=25 label="Combined"];
 B1 -> C1 ;
 C1 [label=" Basis is the radiometer equation: \nS/N = C (T_A/T_S) sqrt(τ Δν)"];
 C1 -> D1 ;
@@ -122,8 +126,9 @@ B412 -> B4122 ;
 B4122 [label="Experimental"];
 B4122 -> B41221 ;
 B41221 [label="I.e., can we simulate different parts\nof the CHIME turning off, and how\nthis impact things? E.g., remove a section of bandwidth?"];
-A -> B51 ;
+A -> B5 ;
+B5 -> B51;
 B51 [color="pink" style="filled" label="Can you use compressive sensing to\nmore efficiently sample the sensitivity? As in,\nfor real-time, could you do this to\nquickly build up a picture of the\ncurrent sensitivity?"];
-A -> B52 ;
+B5 -> B52;
 B52 [color="pink" style="filled" label="Can you do real-time analysis to\nget realistic sensitivity to repeater? I.e., repeat\nthe ACTUAL burst at a different time\nof day."];
 }
