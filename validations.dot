@@ -1,0 +1,35 @@
+digraph mygraph {
+overlap="prism";
+splines="true";
+B3 [fontsize=25 label="Validations"];
+B4 [fontsize=25 label="Combined"];
+B5 [fontsize=25 label="Other"];
+B3 -> B31 ;
+B31 [label="CHIME FRB will also try to\ndetect pulses from known and unknown pulsars.\nThis can be used to validate \(\n\mathcal{P} \) at that particular point in\nphase space. Goal is to have >50%\nagreeance."];
+B4 -> B41 ;
+B41 [label="Instrument health"];
+B41 -> B411 ;
+B411 [label="Monitoring"];
+B411 -> B4111 ;
+B4111 [label="Generating and collecting logs on RFI\nenvironment/metrics"];
+B411 -> B4112 ;
+B4112 [label="Recording pipeline health"];
+B411 -> B4113 ;
+B4113 [label="Getting data from CHIME cosmology team\non antenna health"];
+B4113 -> B41131 ;
+B41131 [label="Possibly ADC calibration?"];
+B41 -> B412 ;
+B412 [label="Inference"];
+B412 -> B4121 ;
+B4121 [label="Analytical"];
+B4121 -> B41211 ;
+B41211 [label="I.e., for radiometer, how will one\nL0 node turning off impact the\nSNR, given the bandwidth lost?"];
+B412 -> B4122 ;
+B4122 [label="Experimental"];
+B4122 -> B41221 ;
+B41221 [label="I.e., can we simulate different parts\nof the CHIME turning off, and how\nthis impact things? E.g., remove a section of bandwidth?"];
+B5 -> B51;
+B51 [color="pink" style="filled" label="Can you use compressive sensing to\nmore efficiently sample the sensitivity? As in,\nfor real-time, could you do this to\nquickly build up a picture of the\ncurrent sensitivity?"];
+B5 -> B52;
+B52 [color="pink" style="filled" label="Can you do real-time analysis to\nget realistic sensitivity to repeater? I.e., repeat\nthe ACTUAL burst at a different time\nof day."];
+}
