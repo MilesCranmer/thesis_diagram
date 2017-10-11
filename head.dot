@@ -1,16 +1,12 @@
 digraph mygraph {
 //layout="sfdp";
-overlap="prism";
-splines="true";
-A [fontsize=32 label="Calculating the sensitivity of CHIME FRB\nto fast radio transients. As in, what\nis the distribution of probabilities for a\ndetection: P (DM, Δt,  S, ...) given typical RFI at site."];
-B1 [fontsize=25 label="Analytical"];
-B2 [fontsize=25 label="Experimental (injection)"];
-B3 [fontsize=25 label="Validations"];
-B4 [fontsize=25 label="Combined"];
-B5 [fontsize=25 label="Other"];
-A -> B1 ;
-A -> B2 ;
-A -> B3 ;
-A -> B4 ;
-A -> B5 ;
+    overlap="prism";
+    splines="true";
+    A [fontsize=32 label="Calculating the sensitivity of CHIME FRB\nto fast radio transients. As in, what\nis the distribution of probabilities for a\ndetection: P (DM, Δt,  S, ...) given typical RFI at site."];
+    B1 [fontsize=25 label="Analytical"];
+    B2 [fontsize=25 label="Experimental (injection)"];
+    B5 [fontsize=25 label="Other"];
+    A -> B1 ;
+    A -> B2 ;
+    A -> B5 ;
 }
