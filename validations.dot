@@ -1,12 +1,13 @@
 digraph mygraph {
 overlap="prism";
 splines="true";
-B3 [fontsize=25 label="Validations"];
-B4 [fontsize=25 label="Combined"];
 B5 [fontsize=25 label="Other"];
+B5 -> B3;
+B5 -> B3;
+B3 [fontsize=25 label="Validations"];
 B3 -> B31 ;
 B31 [label="CHIME FRB will also try to\ndetect pulses from known and unknown pulsars.\nThis can be used to validate \(\n\mathcal{P} \) at that particular point in\nphase space. Goal is to have >50%\nagreeance."];
-B4 -> B41 ;
+B5 -> B41 ;
 B41 [label="Instrument health"];
 B41 -> B411 ;
 B411 [label="Monitoring"];
